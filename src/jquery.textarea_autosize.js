@@ -9,7 +9,11 @@
   var pluginDataName = "plugin_" + pluginName;
 
   var containsText = function (value) {
-    return (value.replace(/\s/g, '').length > 0);
+    if (value) {
+      return (value.replace(/\s/g, '').length > 0);
+    } else {
+      return '';
+    }
   };
 
   function Plugin(element, options) {
